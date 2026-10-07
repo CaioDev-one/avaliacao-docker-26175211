@@ -7,13 +7,13 @@
 services:
 
   portal:
-    image: ____                # a imagem que você publicou na Parte 2 (usuario/nome:tag)
+    image: caiodevone/viaserra-portal:1.0-26175211               # a imagem que você publicou na Parte 2 (usuario/nome:tag)
     ports:
-      - "____:80"              # porta do host: 8000 + XX
+      - "8011:80"              # porta do host: 8000 + XX
     restart: unless-stopped
 
   manutencao:
-    build: ____                # a pasta onde está o Dockerfile que você corrigiu na Parte 3
+    build: ./manutencao               # a pasta onde está o Dockerfile que você corrigiu na Parte 3
     ports:
-      - "____:80"              # porta do host: 7000 + XX
+      - "7011:80"              # porta do host: 7000 + XX
     restart: unless-stopped
